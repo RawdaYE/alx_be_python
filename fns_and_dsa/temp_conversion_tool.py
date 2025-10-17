@@ -1,16 +1,11 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
-
-
-def convert_to_celsius(fahrenheit):
-
-    celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
-    return celsius
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 
 def convert_to_fahrenheit(celsius):
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-    fahrenheit = (CELSIUS_TO_FAHRENHEIT_FACTOR * celsius)  + 32
-    return fahrenheit
+def convert_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 try:
     temprature = float(input("Enter the temperature to convert: "))
@@ -26,8 +21,3 @@ try:
         print("IInvalid unit. Please enter 'C' or 'F'.")
 except ValueError:
     raise ValueError("Invalid temperature. Please enter a numeric value.")
-
-
-
-    
-
