@@ -1,24 +1,22 @@
 import math
 
 class Shape:
-    def area():
-        raise NotImplementedError("haven't implemented yet!")
+    def area(self):
+        raise NotImplementedError("This method Haven't implemented yet!")
     
 
 
 class Rectangle(Shape):
-    def __init__(self, height, length):
-        super().__init__()
-        self.height = height
-        self.length = length
+    def __init__(self, length, width):
+        self.height = length
+        self.width = width
 
     def area(self):
-        return self.height * self.length
+        return self.length * self.width
 
 
 class Circle(Shape):
     def __init__(self, radius):
-        super().__init__()
         self.radius = radius
 
     def area(self):
